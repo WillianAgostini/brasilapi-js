@@ -13,7 +13,7 @@ import * as pix from "./routes/pix";
 import * as registroBr from "./routes/registroBr";
 import * as taxas from "./routes/taxas";
 
-export default {
+export {
   /** Informações sobre sistema bancário */
   bank,
 

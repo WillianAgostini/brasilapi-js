@@ -1,6 +1,6 @@
 import { get } from "../service/api.service";
 import { CVM } from "../types/cvm";
-import { onlyNumbers } from "../utils";
+import { onlyNumbers } from "../utils/format";
 
 const endpoint = "/cvm/corretoras/v1/";
 

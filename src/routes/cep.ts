@@ -1,6 +1,6 @@
 import { get } from "../service/api.service";
 import { CepV2 } from "../types/cep";
-import { onlyNumbers } from "../utils";
+import { onlyNumbers } from "../utils/format";
 
 const endpointV2 = "/cep/v2/";
 
