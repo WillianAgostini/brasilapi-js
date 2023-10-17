@@ -7,6 +7,8 @@ import * as feriados from "./routes/feriados";
 import * as cptec from "./routes/cptec";
 import * as fipe from "./routes/fipe";
 import * as ibge from "./routes/ibge";
+import * as isbn from "./routes/isbn";
+import * as ncm from "./routes/ncm";
 
 export default {
   /** Informações sobre sistema bancário */
@@ -35,4 +37,10 @@ export default {
 
   /** Informações sobre estados Provenientes do IBGE */
   ibge,
+
+  /** Informações sobre livros publicados no Brasil (prefixo 65 ou 85) a partir do ISBN, um sistema internacional de identificação de livros que utiliza números para classificá-los por título, autor, país, editora e edição. */
+  isbn,
+
+  /** Informações referentes a NCMs */
+  ncm,
 };

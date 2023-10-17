@@ -3,10 +3,7 @@ import { Municipio } from "../../types/ibge/municipios";
 
 const endpoint = "/ibge/municipios/v1/";
 
-/**
- * @param {"dados-abertos-br" | "gov" | "wikipedia"} [providers] - (Opcional) Os provedores de dados a serem utilizados. Pode ser "dados-abertos-br", "gov" e/ou "wikipedia".
- */
-export const getBy = (siglaUF: string, providers?: string) => {
+export const getBy = (siglaUF: string, providers?: "dados-abertos-br" | "gov" | "wikipedia") => {
   let url = endpoint + siglaUF;
   if (providers) {
     url += "?providers=" + providers;
