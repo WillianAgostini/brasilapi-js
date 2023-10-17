@@ -1,4 +1,4 @@
-export interface NCM {
+export interface Pix {
   codigo: string;
   descricao: string;
   data_inicio: string;

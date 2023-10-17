@@ -9,6 +9,9 @@ import * as fipe from "./routes/fipe";
 import * as ibge from "./routes/ibge";
 import * as isbn from "./routes/isbn";
 import * as ncm from "./routes/ncm";
+import * as pix from "./routes/pix";
+import * as registroBr from "./routes/registroBr";
+import * as taxas from "./routes/taxas";
 
 export default {
   /** Informações sobre sistema bancário */
@@ -43,4 +46,13 @@ export default {
 
   /** Informações referentes a NCMs */
   ncm,
+
+  /** Retorna informações de todos os participantes do PIX no dia atual ou anterior */
+  pix,
+
+  /** Avalia um dominio no registro.br */
+  registroBr,
+
+  /** Taxas de juros e índices oficiais */
+  taxas,
 };
