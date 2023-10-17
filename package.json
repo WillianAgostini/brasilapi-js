@@ -4,7 +4,7 @@
   "description": "biblioteca em js para acessar Brasil Api",
   "main": "index.js",
   "scripts": {
-    "build": "npm run check && tsc && npm run lint",
+    "build": "npm run check && npm run lint && tsc",
     "test": "jest",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "check": "prettier --ignore-path .gitignore -c \"**/*.+(js|ts|json)\"",
