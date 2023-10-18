@@ -1,16 +1,16 @@
-export interface Ondas {
+export interface Oceans {
   cidade: string;
   estado: string;
   atualizado_em: string;
-  ondas: Onda[];
+  ondas: Ocean[];
 }
 
-export interface Onda {
+export interface Ocean {
   data: string;
-  dados_ondas: DadosOnda[];
+  dados_ondas: OceanData[];
 }
 
-export interface DadosOnda {
+export interface OceanData {
   vento: number;
   direcao_vento: string;
   direcao_vento_desc: string;

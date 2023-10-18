@@ -1,4 +1,4 @@
-export interface Taxa {
+export interface Taxe {
   nome: string;
   valor: number;
 }

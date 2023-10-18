@@ -1,11 +1,11 @@
-export interface Uf {
+export interface State {
   id: number;
   sigla: string;
   nome: string;
-  regiao: Regiao;
+  regiao: Region;
 }
 
-export interface Regiao {
+export interface Region {
   id: number;
   sigla: string;
   nome: string;

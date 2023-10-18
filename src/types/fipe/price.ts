@@ -1,4 +1,4 @@
-export interface Preco {
+export interface Price {
   valor: string;
   marca: string;
   modelo: string;

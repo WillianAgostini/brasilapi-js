@@ -1,2 +1,2 @@
-export * as clima from "./clima";
-export * as cidade from "./cidade";
+export * as weather from "./weather";
+export * as city from "./city";

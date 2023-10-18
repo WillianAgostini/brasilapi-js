@@ -1,4 +1,4 @@
-export interface Marca {
+export interface Brand {
   nome: string;
   valor: string;
 }

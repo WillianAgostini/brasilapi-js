@@ -1,8 +1,8 @@
 import { get } from "../../../service/api.service";
-import { Aeroporto } from "../../../types/cptec/clima/aeroporto";
+import { Airport } from "../../../types/cptec/weather/airport";
 
 const endpoint = "cptec/v1/clima/aeroporto/";
 
 export const getBy = (icaoCode: string) => {
-  return get<Aeroporto>(endpoint + icaoCode);
+  return get<Airport>(endpoint + icaoCode);
 };

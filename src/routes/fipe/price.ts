@@ -1,5 +1,5 @@
 import { get } from "../../service/api.service";
-import { Preco } from "../../types/fipe/preco";
+import { Price } from "../../types/fipe/price";
 
 const endpoint = "/fipe/preco/v1/";
 
@@ -8,5 +8,5 @@ export const getBy = (codigoFipe: string, tabela_referencia?: number) => {
   if (tabela_referencia) {
     url += "?tabela_referencia" + tabela_referencia;
   }
-  return get<Preco>(url);
+  return get<Price>(url);
 };

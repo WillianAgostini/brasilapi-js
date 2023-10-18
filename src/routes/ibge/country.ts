@@ -1,5 +1,5 @@
 import { get } from "../../service/api.service";
-import { Municipio } from "../../types/ibge/municipios";
+import { Country } from "../../types/ibge/country";
 
 const endpoint = "/ibge/municipios/v1/";
 
@@ -12,5 +12,5 @@ export const getBy = (
     url += "?providers=" + providers;
   }
 
-  return get<Municipio[]>(url);
+  return get<Country[]>(url);
 };

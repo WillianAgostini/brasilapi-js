@@ -1,3 +1,3 @@
-export * as marcas from "./marcas";
-export * as preco from "./preco";
-export * as tabelas from "./tabelas";
+export * as brands from "./brands";
+export * as price from "./price";
+export * as tables from "./tables";

@@ -3,17 +3,21 @@ import * as cep from "./routes/cep";
 import * as cnpj from "./routes/cnpj";
 import * as cvm from "./routes/cvm";
 import * as ddd from "./routes/ddd";
-import * as feriados from "./routes/feriados";
+import * as holidays from "./routes/holidays";
 import * as cptec from "./routes/cptec";
 import * as fipe from "./routes/fipe";
 import * as ibge from "./routes/ibge";
 import * as isbn from "./routes/isbn";
 import * as ncm from "./routes/ncm";
 import * as pix from "./routes/pix";
-import * as registroBr from "./routes/registroBr";
-import * as taxas from "./routes/taxas";
+import * as registerBr from "./routes/registerBr";
+import * as taxes from "./routes/taxes";
+import * as request from "./service/api.service";
 
 export {
+  /** Instância para realizar requisições http */
+  request,
+
   /** Informações sobre sistema bancário */
   bank,
 
@@ -33,7 +37,7 @@ export {
   ddd,
 
   /** Informações sobre feriados nacionais */
-  feriados,
+  holidays,
 
   /** Informações sobre Preço Médio de Veículos fornecido pela FIPE (Fundação Instituto de Pesquisas Econômicas) */
   fipe,
@@ -51,8 +55,8 @@ export {
   pix,
 
   /** Avalia um dominio no registro.br */
-  registroBr,
+  registerBr,
 
   /** Taxas de juros e índices oficiais */
-  taxas,
+  taxes,
 };

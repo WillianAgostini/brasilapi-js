@@ -1,12 +1,12 @@
 import { get } from "../service/api.service";
-import { Taxa } from "../types/taxas";
+import { Taxe } from "../types/taxes";
 
 const endpoint = "/taxas/v1/";
 
 export const getAll = () => {
-  return get<Taxa[]>(endpoint);
+  return get<Taxe[]>(endpoint);
 };
 
 export const getBy = (sigla: string) => {
-  return get<Taxa>(endpoint + sigla);
+  return get<Taxe>(endpoint + sigla);
 };

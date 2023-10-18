@@ -1,12 +1,12 @@
 import { get } from "../../service/api.service";
-import { Uf } from "../../types/ibge/uf";
+import { State } from "../../types/ibge/state";
 
 const endpoint = "/ibge/uf/v1/";
 
 export const getAll = () => {
-  return get<Uf[]>(endpoint);
+  return get<State[]>(endpoint);
 };
 
 export const getBy = (code: string) => {
-  return get<Uf>(endpoint + code);
+  return get<State>(endpoint + code);
 };

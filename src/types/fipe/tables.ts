@@ -1,4 +1,4 @@
-export interface Tabela {
+export interface Tables {
   codigo: number;
   mes: string;
 }

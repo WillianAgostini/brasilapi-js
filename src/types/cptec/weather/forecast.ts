@@ -1,4 +1,4 @@
-export interface Previsao {
+export interface Forecast {
   cidade: string;
   estado: string;
   atualizado_em: string;

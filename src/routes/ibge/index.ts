@@ -1,2 +1,2 @@
-export * as municipios from "./municipios";
-export * as uf from "./uf";
+export * as country from "./country";
+export * as state from "./state";

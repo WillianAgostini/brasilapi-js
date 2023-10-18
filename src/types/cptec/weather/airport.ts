@@ -1,4 +1,4 @@
-export interface Aeroporto {
+export interface Airport {
   codigo_icao: string;
   atualizado_em: string;
   pressao_atmosferica: string;

@@ -1,4 +1,4 @@
-export interface RegistroBr {
+export interface RegisterBr {
   status_code: number;
   status: string;
   fqdn: string;
