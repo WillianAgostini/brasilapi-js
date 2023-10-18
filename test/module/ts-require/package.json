@@ -1,0 +1,20 @@
+{
+  "name": "cjs-entrypoint-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm i --no-save --no-package-lock && npm run build && node index.js",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^18.11.3",
+    "brasilapi-js": "file:../../../dist/"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
