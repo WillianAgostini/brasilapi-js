@@ -1,6 +1,6 @@
 {
   "name": "brasilapi-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "biblioteca em js para acessar Brasil Api",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

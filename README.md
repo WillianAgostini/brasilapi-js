@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <strong>Uma lib para a API do [BrasilAPI](https://github.com/BrasilAPI/BrasilAPI) (para Node, Deno ou Bun) utilizando Javascript/Typescript </strong>
+    <strong>Uma lib para a API do <a href="https://github.com/BrasilAPI/BrasilAPI">BrasilAPI</a> (para Node, Deno ou Bun) utilizando Javascript/Typescript </strong>
   </p>
 </div>
 
