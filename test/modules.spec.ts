@@ -4,7 +4,7 @@ import util from "util";
 
 const exec = util.promisify(cp.exec);
 
-describe("api", () => {
+describe("modules", () => {
   jest.setTimeout(30000);
 
   const pkgPathEsm = path.join(__dirname, "./module/esm");
