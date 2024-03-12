@@ -12,7 +12,8 @@
     "test": "jest",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "check": "prettier --ignore-path .gitignore -c \"**/*.+(js|ts|json)\"",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build"
   },
   "author": "Willian Carlos Agostini",
   "license": "MIT",
