@@ -1,5 +1,6 @@
 import * as bank from "./routes/bank";
 import * as cep from "./routes/cep";
+import * as cepV1 from "./routes/cepV1";
 import * as cnpj from "./routes/cnpj";
 import * as cvm from "./routes/cvm";
 import * as ddd from "./routes/ddd";
@@ -23,6 +24,9 @@ export {
 
   /** Informações referentes a CEPs */
   cep,
+
+  /** Informações referentes a CEPs V1 */
+  cepV1,
 
   /** Busca dados de empresas por CNPJ */
   cnpj,
