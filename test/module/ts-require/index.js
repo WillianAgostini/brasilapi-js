@@ -4,6 +4,7 @@ const api = require("brasilapi-js");
 assert.strictEqual(typeof api.bank.getAll, "function");
 assert.strictEqual(typeof api.bank.getBy, "function");
 assert.strictEqual(typeof api.cep.getBy, "function");
+assert.strictEqual(typeof api.cepV1.getBy, "function");
 assert.strictEqual(typeof api.cnpj.getBy, "function");
 assert.strictEqual(typeof api.cptec.city.getBy, "function");
 assert.strictEqual(typeof api.cptec.city.getAll, "function");

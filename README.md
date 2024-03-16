@@ -54,6 +54,14 @@ Buscando um banco específico pelo seu código.
 const response = await api.bank.getBy(1);
 ```
 
+### CEP V1
+
+Buscando um CEP específico.
+
+```js
+const response = await api.cepV1.getBy('01001000');
+```
+
 ### CEP V2
 
 Buscando um CEP específico.
