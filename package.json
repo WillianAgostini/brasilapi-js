@@ -1,6 +1,6 @@
 {
   "name": "brasilapi-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "biblioteca em js para acessar Brasil Api",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -32,5 +32,12 @@
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
+  },
+  "bugs": {
+    "url": "https://github.com/WillianAgostini/brasilapi-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/WillianAgostini/brasilapi-js.git"
   }
 }
