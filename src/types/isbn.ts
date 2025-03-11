@@ -1,7 +1,7 @@
 export interface ISBN {
   isbn: string;
   title: string;
-  subtitle: any;
+  subtitle: unknown;
   authors: string[];
   publisher: string;
   synopsis: string;
@@ -11,8 +11,8 @@ export interface ISBN {
   page_count: number;
   subjects: string[];
   location: string;
-  retail_price: any;
-  cover_url: any;
+  retail_price: unknown;
+  cover_url: unknown;
   provider: string;
 }
 
