@@ -261,3 +261,11 @@ Buscando informações de uma taxa a partir do seu nome/sigla.
 ```js
 const response = await api.taxes.getBy('Selic');
 ```
+
+### Request
+
+Realizando uma chamada direta a qualquer URL da API BrasilAPI.
+
+```js
+const response = await api.request.get('taxas/v1');
+```
