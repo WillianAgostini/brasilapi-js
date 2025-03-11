@@ -153,7 +153,7 @@ const response = await api.cptec.weather.ocean.getBy(999, 6);
 Buscando o estado e cidades que possuem determinado DDD.
 
 ```js
-const response = await api.ddd.getBy.getBy(77);
+const response = await api.ddd.getBy('77');
 ```
 
 ### Feriados
@@ -161,7 +161,7 @@ const response = await api.ddd.getBy.getBy(77);
 Buscando todos os feriados nacionais em determinado ano.
 
 ```js
-const response = await api.holidays.getBy(2022);
+const response = await api.holidays.getBy('2022');
 ```
 
 ### FIPE
