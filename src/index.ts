@@ -13,6 +13,7 @@ import * as ncm from "./routes/ncm";
 import * as pix from "./routes/pix";
 import * as registerBr from "./routes/registerBr";
 import * as taxes from "./routes/taxes";
+import * as exchange from "./routes/exchange";
 import * as request from "./service/api.service";
 
 export {
@@ -63,4 +64,7 @@ export {
 
   /** Taxas de juros e índices oficiais */
   taxes,
+
+  /** Informações referentes ao Cambio */
+  exchange,
 };

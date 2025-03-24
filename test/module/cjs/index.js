@@ -29,3 +29,5 @@ assert.strictEqual(typeof api.pix.getAll, "function");
 assert.strictEqual(typeof api.registerBr.getBy, "function");
 assert.strictEqual(typeof api.taxes.getAll, "function");
 assert.strictEqual(typeof api.taxes.getBy, "function");
+assert.strictEqual(typeof api.exchange.currency.getAll, "function");
+assert.strictEqual(typeof api.exchange.rates.getBy, "function");
