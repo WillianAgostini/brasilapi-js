@@ -262,6 +262,20 @@ Buscando informações de uma taxa a partir do seu nome/sigla.
 const response = await api.taxes.getBy('Selic');
 ```
 
+### Cambio
+
+Retorna a lista de moedas que podem ser usadas como parâmetros para este conjunto de dados.
+
+```js
+const response = await api.exchange.currency.getAll();
+```
+
+Busca pelo câmbio do Real com outra moeda, em uma data específica.
+
+```js
+const response = await api.exchange.rates.getBy('USD', '2025-02-13');
+```
+
 ### Request
 
 Realizando uma chamada direta a qualquer URL da API BrasilAPI.
