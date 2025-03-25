@@ -17,6 +17,7 @@ assert.strictEqual(typeof api.ddd.getBy, "function");
 assert.strictEqual(typeof api.fipe.brands.getBy, "function");
 assert.strictEqual(typeof api.fipe.price.getBy, "function");
 assert.strictEqual(typeof api.fipe.tables.getAll, "function");
+assert.strictEqual(typeof api.fipe.vehicles.getBy, "function");
 assert.strictEqual(typeof api.holidays.getBy, "function");
 assert.strictEqual(typeof api.ibge.country.getBy, "function");
 assert.strictEqual(typeof api.ibge.state.getAll, "function");

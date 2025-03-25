@@ -184,6 +184,12 @@ Buscando as tabelas de referência existentes.
 const response = await api.fipe.tables.getAll();
 ```
 
+Buscando os veículos de acordo com a marca e o tipo de veículo.
+
+```js
+const response = await api.fipe.vehicles.getBy('carros', 36);
+```
+
 ### IBGE
 
 Buscando todos os municípios de um estado específico pela sua sigla.
