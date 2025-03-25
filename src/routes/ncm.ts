@@ -3,15 +3,17 @@ import { NCM } from "../types/ncm";
 
 const endpoint = "/ncm/v1/";
 
-export const getAll = () => {
+const getAll = () => {
   return get<NCM[]>(endpoint);
 };
 
-export const getBy = (code: string) => {
+const getBy = (code: string) => {
   return get<NCM>(endpoint + code);
 };
 
-export const search = (code: string) => {
+const search = (code: string) => {
   const url = endpoint.substring(0, endpoint.length - 1) + "?search=" + code;
   return get<NCM>(url);
 };
+
+export default { getAll, getBy, search };

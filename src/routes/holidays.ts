@@ -3,6 +3,8 @@ import { Holiday } from "../types/holidays";
 
 const endpoint = "/feriados/v1/";
 
-export const getBy = (year: string) => {
+const getBy = (year: string) => {
   return get<Holiday[]>(endpoint + year);
 };
+
+export default { getBy };

@@ -1,2 +1,7 @@
-export * as weather from "./weather";
-export * as city from "./city";
+import weather from "./weather";
+import city from "./city";
+
+export default {
+  weather,
+  city,
+};

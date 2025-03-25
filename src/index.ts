@@ -1,19 +1,19 @@
-import * as bank from "./routes/bank";
-import * as cep from "./routes/cep";
-import * as cepV1 from "./routes/cepV1";
-import * as cnpj from "./routes/cnpj";
-import * as cvm from "./routes/cvm";
-import * as ddd from "./routes/ddd";
-import * as holidays from "./routes/holidays";
-import * as cptec from "./routes/cptec";
-import * as fipe from "./routes/fipe";
-import * as ibge from "./routes/ibge";
-import * as isbn from "./routes/isbn";
-import * as ncm from "./routes/ncm";
-import * as pix from "./routes/pix";
-import * as registerBr from "./routes/registerBr";
-import * as taxes from "./routes/taxes";
-import * as exchange from "./routes/exchange";
+import bank from "./routes/bank";
+import cep from "./routes/cep";
+import cepV1 from "./routes/cepV1";
+import cnpj from "./routes/cnpj";
+import cvm from "./routes/cvm";
+import ddd from "./routes/ddd";
+import holidays from "./routes/holidays";
+import cptec from "./routes/cptec";
+import fipe from "./routes/fipe";
+import ibge from "./routes/ibge";
+import isbn from "./routes/isbn";
+import ncm from "./routes/ncm";
+import pix from "./routes/pix";
+import registerBr from "./routes/registerBr";
+import taxes from "./routes/taxes";
+import exchange from "./routes/exchange";
 import * as request from "./service/api.service";
 
 export {

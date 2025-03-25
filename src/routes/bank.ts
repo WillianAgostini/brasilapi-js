@@ -3,10 +3,12 @@ import { Bank } from "../types/bank";
 
 const endpoint = "/banks/v1/";
 
-export const getAll = () => {
+const getAll = () => {
   return get<Bank[]>(endpoint);
 };
 
-export const getBy = (code: number) => {
+const getBy = (code: number) => {
   return get<Bank>(endpoint + code);
 };
+
+export default { getAll, getBy };

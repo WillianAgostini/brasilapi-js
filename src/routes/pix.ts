@@ -3,6 +3,8 @@ import { Pix } from "../types/pix";
 
 const endpoint = "/pix/v1/participants/";
 
-export const getAll = () => {
+const getAll = () => {
   return get<Pix[]>(endpoint);
 };
+
+export default { getAll };

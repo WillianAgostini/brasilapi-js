@@ -4,6 +4,8 @@ import { onlyNumbers } from "../utils/format";
 
 const endpoint = "/cnpj/v1/";
 
-export const getBy = (cnpj: string) => {
+const getBy = (cnpj: string) => {
   return get<CNPJ>(endpoint + onlyNumbers(cnpj));
 };
+
+export default { getBy };
