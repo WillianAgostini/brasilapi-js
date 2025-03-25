@@ -3,6 +3,8 @@ import { Airport } from "../../../types/cptec/weather/airport";
 
 const endpoint = "cptec/v1/clima/aeroporto/";
 
-export const getBy = (icaoCode: string) => {
+const getBy = (icaoCode: string) => {
   return get<Airport>(endpoint + icaoCode);
 };
+
+export default { getBy };

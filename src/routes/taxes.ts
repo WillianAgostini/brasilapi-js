@@ -3,10 +3,12 @@ import { Taxe } from "../types/taxes";
 
 const endpoint = "/taxas/v1/";
 
-export const getAll = () => {
+const getAll = () => {
   return get<Taxe[]>(endpoint);
 };
 
-export const getBy = (sigla: string) => {
+const getBy = (sigla: string) => {
   return get<Taxe>(endpoint + sigla);
 };
+
+export default { getAll, getBy };

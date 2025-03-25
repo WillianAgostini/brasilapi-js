@@ -5,7 +5,7 @@ import util from "util";
 const exec = util.promisify(cp.exec);
 
 describe("modules", () => {
-  jest.setTimeout(30000);
+  jest.setTimeout(10_000);
 
   const pkgPathEsm = path.join(__dirname, "./module/esm");
   const pkgPathCjs = path.join(__dirname, "./module/cjs");
@@ -18,25 +18,27 @@ describe("modules", () => {
   });
 
   afterAll(async () => {
-    await exec(`rm -rf ${pkgPathEsm}/node_modules`, {});
-    await exec(`rm -rf ${pkgPathCjs}/node_modules`, {});
-    await exec(`rm -rf ${pkgPathTs}/node_modules`, {});
-    await exec(`rm -rf ${pkgPathTsRequire}/node_modules`, {});
+    await Promise.all([
+      exec(`rm -rf ${pkgPathEsm}/node_modules`, {}),
+      exec(`rm -rf ${pkgPathCjs}/node_modules`, {}),
+      exec(`rm -rf ${pkgPathTs}/node_modules`, {}),
+      exec(`rm -rf ${pkgPathTsRequire}/node_modules`, {}),
+    ]);
   });
 
-  it("esm", async () => {
+  it.concurrent("esm", async () => {
     await exec(`npm test --prefix ${pkgPathEsm}`, {});
   });
 
-  it("cjs", async () => {
+  it.concurrent("cjs", async () => {
     await exec(`npm test --prefix ${pkgPathCjs}`, {});
   });
 
-  it("ts", async () => {
+  it.concurrent("ts", async () => {
     await exec(`npm test --prefix ${pkgPathTs}`, {});
   });
 
-  it("ts-require", async () => {
+  it.concurrent("ts-require", async () => {
     await exec(`npm test --prefix ${pkgPathTsRequire}`, {});
   });
 });

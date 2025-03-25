@@ -184,6 +184,12 @@ Buscando as tabelas de referência existentes.
 const response = await api.fipe.tables.getAll();
 ```
 
+Buscando os veículos de acordo com a marca e o tipo de veículo.
+
+```js
+const response = await api.fipe.vehicles.getBy('carros', 36);
+```
+
 ### IBGE
 
 Buscando todos os municípios de um estado específico pela sua sigla.
@@ -260,6 +266,20 @@ Buscando informações de uma taxa a partir do seu nome/sigla.
 
 ```js
 const response = await api.taxes.getBy('Selic');
+```
+
+### Cambio
+
+Retorna a lista de moedas que podem ser usadas como parâmetros para este conjunto de dados.
+
+```js
+const response = await api.exchange.currency.getAll();
+```
+
+Busca pelo câmbio do Real com outra moeda, em uma data específica.
+
+```js
+const response = await api.exchange.rates.getBy('USD', '2025-02-13');
 ```
 
 ### Request

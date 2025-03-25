@@ -3,7 +3,7 @@ import { Country } from "../../types/ibge/country";
 
 const endpoint = "/ibge/municipios/v1/";
 
-export const getBy = (
+const getBy = (
   siglaUF: string,
   providers?: "dados-abertos-br" | "gov" | "wikipedia",
 ) => {
@@ -14,3 +14,5 @@ export const getBy = (
 
   return get<Country[]>(url);
 };
+
+export default { getBy };

@@ -1,4 +1,11 @@
-export * as airport from "./airport";
-export * as capital from "./capital";
-export * as ocean from "./ocean";
-export * as forecast from "./forecast";
+import airport from "./airport";
+import capital from "./capital";
+import ocean from "./ocean";
+import forecast from "./forecast";
+
+export default {
+  airport,
+  capital,
+  ocean,
+  forecast,
+};

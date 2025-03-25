@@ -3,6 +3,8 @@ import { Tables } from "../../types/fipe/tables";
 
 const endpoint = "/fipe/tabelas/v1/";
 
-export const getAll = () => {
+const getAll = () => {
   return get<Tables[]>(endpoint);
 };
+
+export default { getAll };

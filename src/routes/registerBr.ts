@@ -3,6 +3,8 @@ import { RegisterBr } from "../types/registerBr";
 
 const endpoint = "/registrobr/v1/";
 
-export const getBy = (domain: string) => {
+const getBy = (domain: string) => {
   return get<RegisterBr>(endpoint + domain);
 };
+
+export default { getBy };
