@@ -1,6 +1,7 @@
 {
   "name": "ts",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "npm i --no-save --no-package-lock && node --import=tsx index.ts"
   },
