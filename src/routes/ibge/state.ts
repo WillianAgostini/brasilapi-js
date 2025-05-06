@@ -3,12 +3,10 @@ import { State } from "../../types/ibge/state";
 
 const endpoint = "/ibge/uf/v1/";
 
-const getAll = () => {
+export const getAll = () => {
   return get<State[]>(endpoint);
 };
 
-const getBy = (code: string) => {
+export const getBy = (code: string) => {
   return get<State>(endpoint + code);
 };
-
-export default { getAll, getBy };

@@ -4,12 +4,10 @@ import { onlyNumbers } from "../utils/format";
 
 const endpoint = "/cvm/corretoras/v1/";
 
-const getAll = () => {
+export const getAll = () => {
   return get<CVM[]>(endpoint);
 };
 
-const getBy = (cnpj: string) => {
+export const getBy = (cnpj: string) => {
   return get<CVM>(endpoint + onlyNumbers(cnpj));
 };
-
-export default { getAll, getBy };

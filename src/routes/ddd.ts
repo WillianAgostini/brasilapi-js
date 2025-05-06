@@ -3,8 +3,6 @@ import { DDD } from "../types/ddd";
 
 const endpoint = "/ddd/v1/";
 
-const getBy = (ddd: string) => {
+export const getBy = (ddd: string) => {
   return get<DDD>(endpoint + ddd);
 };
-
-export default { getBy };

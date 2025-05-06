@@ -3,7 +3,7 @@ import { ISBN } from "../types/isbn";
 
 const endpoint = "/isbn/v1/";
 
-const getBy = (
+export const getBy = (
   isbn: string,
   provider?: "cbl" | "mercado-editorial" | "open-library" | "google-books",
 ) => {
@@ -13,5 +13,3 @@ const getBy = (
   }
   return get<ISBN>(url);
 };
-
-export default { getBy };

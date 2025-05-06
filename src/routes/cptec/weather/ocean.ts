@@ -3,11 +3,9 @@ import { Oceans } from "../../../types/cptec/weather/oceans";
 
 const endpoint = "cptec/v1/ondas/";
 
-const getBy = (cityCode: number, days?: number) => {
+export const getBy = (cityCode: number, days?: number) => {
   let url = endpoint + cityCode;
   if (days) url += "/" + days;
 
   return get<Oceans>(url);
 };
-
-export default { getBy };

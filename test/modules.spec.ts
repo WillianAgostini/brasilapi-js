@@ -4,24 +4,26 @@ import util from "util";
 
 const exec = util.promisify(cp.exec);
 
-describe.each(["cjs", "cts", "mjs", "mts", "ts", "ts-require"])(
-  "modules",
-  (type) => {
-    jest.setTimeout(10_000);
+describe("modules", () => {
+  jest.setTimeout(10_000);
 
-    const pkgPath = path.join(__dirname, `./module/${type}`);
+  beforeAll(async () => {
+    const project = path.join(__dirname, "..");
+    await exec(`npm run build --prefix ${project}`, {});
+  });
 
-    beforeAll(async () => {
-      const project = path.join(__dirname, "..");
-      await exec(`npm run build --prefix ${project}`, {});
-    });
+  describe.each(["cjs", "cts", "mjs", "mts", "ts", "ts-require"])(
+    "modules",
+    (type) => {
+      const pkgPath = path.join(__dirname, `./module/${type}`);
 
-    afterAll(async () => {
-      await Promise.all([exec(`rm -rf ${pkgPath}/node_modules`, {})]);
-    });
+      afterAll(async () => {
+        await Promise.all([exec(`rm -rf ${pkgPath}/node_modules`, {})]);
+      });
 
-    it(type, async () => {
-      await exec(`npm test --prefix ${pkgPath}`, {});
-    });
-  },
-);
+      it(type, async () => {
+        await exec(`npm test --prefix ${pkgPath}`, {});
+      });
+    },
+  );
+});
