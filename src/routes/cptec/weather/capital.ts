@@ -3,8 +3,6 @@ import { Capital } from "../../../types/cptec/weather/capital";
 
 const endpoint = "cptec/v1/clima/capital/";
 
-const getAll = () => {
+export const getAll = () => {
   return get<Capital[]>(endpoint);
 };
-
-export default { getAll };

@@ -1,7 +1,2 @@
-import country from "./country";
-import state from "./state";
-
-export default {
-  country,
-  state,
-};
+export * as country from "./country";
+export * as state from "./state";

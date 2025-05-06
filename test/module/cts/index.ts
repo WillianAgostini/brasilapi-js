@@ -1,6 +1,6 @@
-"use strict";
-const assert = require("assert");
-const api = require("brasilapi-js");
+import assert from "assert";
+import api from "brasilapi-js";
+
 assert.strictEqual(typeof api.bank.getAll, "function");
 assert.strictEqual(typeof api.bank.getBy, "function");
 assert.strictEqual(typeof api.cep.getBy, "function");

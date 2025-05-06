@@ -3,8 +3,6 @@ import { Currency } from "../../types/exchange/currency";
 
 const endpoint = "/cambio/v1/moedas";
 
-const getAll = () => {
+export const getAll = () => {
   return get<Currency>(endpoint);
 };
-
-export default { getAll };

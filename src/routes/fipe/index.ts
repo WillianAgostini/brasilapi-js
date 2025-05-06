@@ -1,11 +1,4 @@
-import brands from "./brands";
-import price from "./price";
-import tables from "./tables";
-import vehicles from "./vehicles";
-
-export default {
-  brands,
-  price,
-  tables,
-  vehicles,
-};
+export * as brands from "./brands";
+export * as price from "./price";
+export * as tables from "./tables";
+export * as vehicles from "./vehicles";

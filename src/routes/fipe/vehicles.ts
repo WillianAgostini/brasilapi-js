@@ -4,7 +4,7 @@ import { VehicleType } from "../../types/fipe/vehicle";
 
 const endpoint = "/fipe/tabelas/v1/";
 
-const getBy = (
+export const getBy = (
   vehicleType: VehicleType,
   brandCode: number,
   tabela_referencia?: number,
@@ -15,5 +15,3 @@ const getBy = (
   }
   return get<VehicleModel[]>(url);
 };
-
-export default { getBy };
