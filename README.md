@@ -211,6 +211,14 @@ Buscando informações de todos os estados brasileiros.
 const response = await api.ibge.state.getAll();
 ```
 
+Buscando informações de um estado específico pela sua sigla.
+
+```js
+const response = await api.ibge.country.getBy('BA');
+```
+> ⚠️ `api.ibge.country.getBy()` está obsoleto.  
+> Recomendamos usar `api.ibge.city.getBy("UF")` para obter municípios de um estado.
+
 ### ISBN
 
 Buscando informações sobre um livro específico pelo seu código ISBN.
