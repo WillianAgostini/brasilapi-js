@@ -192,7 +192,14 @@ const response = await api.fipe.vehicles.getBy('carros', 36);
 
 ### IBGE
 
-Buscando todos os municípios de um estado específico pela sua sigla.
+Buscando todos os municipios de um estado específico pela sua sigla.
+
+```js
+const response = await api.ibge.city.getBy('SP');
+```
+>ℹ️ A função city.getBy retorna a lista de municípios (cidades) do estado informado.
+>A função country.getBy permanece para compatibilidade, mas não representa corretamente esses dados
+>Buscando informações de um estado específico pela sua sigla.
 
 ```js
 const response = await api.ibge.state.getBy('BA');
@@ -202,12 +209,6 @@ Buscando informações de todos os estados brasileiros.
 
 ```js
 const response = await api.ibge.state.getAll();
-```
-
-Buscando informações de um estado específico pela sua sigla.
-
-```js
-const response = await api.ibge.country.getBy('BA');
 ```
 
 ### ISBN
