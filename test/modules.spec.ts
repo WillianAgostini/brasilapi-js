@@ -18,7 +18,7 @@ describe("modules", () => {
       const pkgPath = path.join(__dirname, `./module/${type}`);
 
       afterAll(async () => {
-        await Promise.all([exec(`rimraf ${pkgPath}/node_modules`, {})]);
+        await exec(`rimraf ${pkgPath}/node_modules`, {});
       });
 
       it(type, async () => {
