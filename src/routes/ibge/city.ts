@@ -1,11 +1,8 @@
 import { get } from "../../service/api.service";
-import { Country } from "../../types/ibge/country";
+import { City } from "../../types/ibge/city";
 
 const endpoint = "/ibge/municipios/v1/";
 
-/**
- * @deprecated Esta função está obsoleta. Use `ibge.city.getBy("UF")` no lugar.
- */
 export const getBy = (
   siglaUF: string,
   providers?: "dados-abertos-br" | "gov" | "wikipedia",
@@ -15,5 +12,5 @@ export const getBy = (
     url += "?providers=" + providers;
   }
 
-  return get<Country[]>(url);
+  return get<City[]>(url);
 };
