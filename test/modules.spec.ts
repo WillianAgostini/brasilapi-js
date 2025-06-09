@@ -46,35 +46,52 @@ assert.strictEqual(typeof api.taxes.getAll, "function");
 assert.strictEqual(typeof api.taxes.getBy, "function");
 `;
 
-  const entryFiles: Record<string, string> = {
-    cjs: "index.js",
-    cts: "index.ts",
-    mjs: "index.js",
-    mts: "index.ts",
-    ts: "index.ts",
-    "ts-require": "index.ts",
+  const fileExt: Record<string, string> = {
+    cjs: "js",
+    cts: "ts",
+    mjs: "js",
+    mts: "ts",
+    ts: "ts",
+    "ts-require": "ts",
+  };
+
+  const importCode: Record<string, string> = {
+    cjs: 'const assert = require("assert");\nconst api = require("brasilapi-js");',
+    cts: 'import assert from "assert";\nimport api from "brasilapi-js";',
+    mjs: 'import assert from "assert";\nimport api from "brasilapi-js";',
+    mts: 'import assert from "assert";\nimport api from "brasilapi-js";',
+    ts: 'import assert from "assert";\nimport api from "brasilapi-js";',
+    "ts-require":
+      'const assert = require("assert");\nconst api = require("brasilapi-js");',
+  };
+
+  const runCommand: Record<string, string> = {
+    cjs: "node assert.js",
+    cts: "npx tsx assert.ts",
+    mjs: "node assert.js",
+    mts: "npx tsx assert.ts",
+    ts: "npx tsx assert.ts",
+    "ts-require": "npx tsx assert.ts",
   };
 
   describe.each(["cjs", "cts", "mjs", "mts", "ts", "ts-require"])(
     "modules",
     (type) => {
       const pkgPath = path.join(__dirname, `./module/${type}`);
-      const entryFile = path.join(pkgPath, entryFiles[type]);
-
-      let originalContent: string;
+      const testFile = path.join(pkgPath, `assert.${fileExt[type]}`);
 
       beforeAll(async () => {
-        originalContent = await fs.readFile(entryFile, "utf8");
-        await fs.appendFile(entryFile, "\n" + assertCode);
+        await fs.writeFile(testFile, `${importCode[type]}\n${assertCode}`);
+        await exec("npm i --no-save --no-package-lock", { cwd: pkgPath });
       });
 
       afterAll(async () => {
-        await exec(`rimraf ${pkgPath}/node_modules`, {});
-        await fs.writeFile(entryFile, originalContent, "utf8");
+        await exec("rimraf node_modules", { cwd: pkgPath });
+        await fs.rm(testFile);
       });
 
       it(type, async () => {
-        await exec(`npm test --prefix ${pkgPath}`, {});
+        await exec(runCommand[type], { cwd: pkgPath });
       });
     },
   );

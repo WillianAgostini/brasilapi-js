@@ -1,5 +1,5 @@
 {
-  "name": "ts",
+  "name": "mts-entrypoint-test",
   "main": "index.js",
   "type": "module",
   "scripts": {
