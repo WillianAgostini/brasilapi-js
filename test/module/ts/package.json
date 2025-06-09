@@ -1,5 +1,5 @@
 {
-  "name": "ts",
+  "name": "ts-entrypoint-test",
   "main": "index.js",
   "scripts": {
     "test": "npm i --no-save --no-package-lock && node --import=tsx index.ts"

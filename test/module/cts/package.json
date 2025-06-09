@@ -1,5 +1,5 @@
 {
-  "name": "ts",
+  "name": "cts-entrypoint-test",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
