@@ -11,7 +11,7 @@ export const getBy = (
 ) => {
   let url = `${endpoint}/${vehicleType}/${brandCode}`;
   if (tabela_referencia) {
-    url += "?tabela_referencia" + tabela_referencia;
+    url += "?tabela_referencia=" + tabela_referencia;
   }
   return get<VehicleModel[]>(url);
 };
